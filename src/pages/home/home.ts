@@ -12,7 +12,7 @@ export class HomePage {
   res : any;
   constructor(public navCtrl: NavController,
   private alertCtrl:AlertController,
-private accuweatherProvider: AccuweatherApiProvider) {
+  private accuweatherProvider: AccuweatherApiProvider) {
 
   }
   presentAlert(){
