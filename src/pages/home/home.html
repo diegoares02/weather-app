@@ -1,17 +1,20 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>INICIO</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <div id="boton">
+    <button ion-button (click)='presentAlert()'>
+      <h1>Obtener datos</h1>
+    </button>
+  </div>
+  <div id="Temperature">
+    <ion-list>
+      <ion-item *ngFor="let tempertura of res">
+        <h1>{{tempertura.Temperature.Metric.UnitType}} °{{tempertura.Temperature.Metric.Unit}}</h1>
+      </ion-item>
+    </ion-list>
+  </div>  
 </ion-content>
